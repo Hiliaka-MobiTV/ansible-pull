@@ -3,5 +3,6 @@
   become: true
   tasks:
     - name: Install Kodi
-      zypper:
+      community.general.zypper:
         name: kodi
+        state: latest
