@@ -6,3 +6,7 @@
       community.general.zypper:
         name: sl
         state: latest
+    - name: Change permission of sl game
+      file:
+        dest: /usr/bin/sl
+        mode: '0744'
