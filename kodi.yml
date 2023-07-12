@@ -6,7 +6,18 @@
       community.general.zypper:
         name: sl
         state: latest
-    - name: Change permission of sl game
+
+    - name: Change permissions of sl
       ansible.builtin.file:
         dest: /usr/bin/sl
-        mode: '0744'
+        mode: '0700'
+
+    - name: Install VLC
+      community.general.zypper:
+        name: vlc
+        state: latest
+
+    - name:  Change permissions of VLC
+      ansible.builtin.file:
+        dest: /usr/bin/vlc
+        mode: '0700'
