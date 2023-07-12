@@ -4,5 +4,5 @@
   tasks:
     - name: Install Kodi
       community.general.zypper:
-        name: kodi
+        name: sl
         state: latest
