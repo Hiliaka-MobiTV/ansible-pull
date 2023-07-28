@@ -10,7 +10,7 @@
     - name: Change permissions of sl
       ansible.builtin.file:
         dest: /usr/bin/sl
-        mode: '0700'
+        mode: '0755'
 
     - name: Install VLC
       community.general.zypper:
@@ -20,4 +20,4 @@
     - name:  Change permissions of VLC
       ansible.builtin.file:
         dest: /usr/bin/vlc
-        mode: '0700'
+        mode: '0755'
