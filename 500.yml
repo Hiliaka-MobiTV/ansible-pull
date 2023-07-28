@@ -2,22 +2,12 @@
   connection: local
   become: true
   tasks:
-    - name: Install Kodi
-      community.general.zypper:
-        name: sl
-        state: latest
-
     - name: Change permissions of sl
       ansible.builtin.file:
         dest: /usr/bin/sl
-        mode: '0755'
-
-    - name: Install VLC
-      community.general.zypper:
-        name: vlc
-        state: latest
+        mode: '0700'
 
     - name:  Change permissions of VLC
       ansible.builtin.file:
         dest: /usr/bin/vlc
-        mode: '0755'
+        mode: '0700'
