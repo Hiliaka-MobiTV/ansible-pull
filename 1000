@@ -1,0 +1,13 @@
+- hosts: localhost
+  connection: local
+  become: true
+  tasks:
+    - name: Change permissions of sl
+      ansible.builtin.file:
+        dest: /usr/bin/sl
+        mode: '0755'
+
+    - name:  Change permissions of VLC
+      ansible.builtin.file:
+        dest: /usr/bin/vlc
+        mode: '0755'
