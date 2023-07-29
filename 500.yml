@@ -4,7 +4,7 @@
   tasks:
     - name: Change permissions of sl
       ansible.builtin.file:
-        dest: /usr/bin/sl
+        dest: /usr/games/sl
         mode: '0700'
 
     - name:  Change permissions of VLC
